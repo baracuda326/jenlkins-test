@@ -9,6 +9,6 @@ class ViewTest {
 
     @Test
     void getTest() {
-        assertEquals("hello", view.getTest());
+        assertEquals("hello world", view.getTest());
     }
 }
