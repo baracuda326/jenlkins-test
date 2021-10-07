@@ -27,5 +27,10 @@ pipeline {
                 }
            }
         }
+        stage('SonarQube') {
+           steps {
+               sh './mvnw sonar:sonar'
+               }
+           }
     }
 }
