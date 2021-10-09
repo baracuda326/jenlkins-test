@@ -32,5 +32,10 @@ pipeline {
                sh './mvnw clean verify sonar:sonar'
                }
            }
+        stage("Quality gate") {
+           steps {
+               waitForQualityGate abortPipeline: true
+               }
+           }
     }
 }
