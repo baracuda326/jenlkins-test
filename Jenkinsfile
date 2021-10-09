@@ -29,7 +29,6 @@ pipeline {
         }
         stage('SonarQube hook') {
            steps {
-             def mvn = tool 'Default Maven';
              withSonarQubeEnv() {
                sh './mvnw sonar:sonar'
                }
