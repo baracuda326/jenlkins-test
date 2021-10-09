@@ -29,7 +29,7 @@ pipeline {
         }
         stage('SonarQube') {
            steps {
-               sh './mvnw clean  sonar:sonar'
+               sh './mvnw clean verify sonar:sonar'
                }
            }
         stage("Quality gate") {
