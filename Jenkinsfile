@@ -27,12 +27,6 @@ pipeline {
                 }
            }
         }
-        stage('SonarQube hook') {
-           steps {
-             withSonarQubeEnv() {
-               sh './mvnw sonar:sonar'
-               }
-            }
         stage('SonarQube') {
            steps {
                sh './mvnw clean verify sonar:sonar'
