@@ -29,10 +29,7 @@ pipeline {
         }
         stage('SonarQube') {
            steps {
-               sh './mvnw clean verify sonar:sonar \
-                          >   -Dsonar.projectKey=jenkins \
-                          >   -Dsonar.host.url=http://127.0.0.1:9000 \
-                          >   -Dsonar.login=11d1f0dad99bfd9acc2043c518cc372bbcd0da7c'
+               sh './mvnw clean verify sonar:sonar'
                }
            }
     }
