@@ -44,7 +44,6 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    def mvn = tool 'Default Maven';
     withSonarQubeEnv() {
       sh './mvnw clean verify sonar:sonar'
     }
