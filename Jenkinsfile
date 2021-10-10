@@ -29,7 +29,9 @@ pipeline {
         }
         stage('SonarQube') {
            steps {
-               sh './mvnw clean sonar:sonar'
+             withSonarQubeEnv(installationName: 'SonarQube'){
+                sh './mvnw clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
+             }
                }
            }
         stage("Quality gate") {
