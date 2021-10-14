@@ -36,7 +36,7 @@ pipeline {
            }
         stage('Checkstyle') {
             steps {
-                sh './mvnw checkstyle:check'
+                sh './mvnw checkstyle:checkstyle'
                 recordIssues(tools: [checkStyle(reportEncoding: 'UTF-8')])
             }
         }
