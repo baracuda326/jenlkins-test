@@ -34,5 +34,10 @@ pipeline {
              }
                }
            }
+        stage('Checkstyle') {
+            steps {
+                sh './mvnw checkstyle:checkstyle'
+            }
+        }
     }
 }
