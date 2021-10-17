@@ -116,7 +116,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/contract.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/generation/account-contract.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
                             <modelNameSuffix>Dto</modelNameSuffix>
@@ -128,7 +128,7 @@
                                 <apiPackage>com.example.demo.api</apiPackage>
                                 <configPackage>com.example.demo.config</configPackage>
                                 <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
-                                <dateLibrary>java8</dateLibrary>
+                                <dateLibrary>java11</dateLibrary>
                                 <delegatePattern>true</delegatePattern>
                                 <interfaceonly>true</interfaceonly>
                             </configOptions>
