@@ -10,7 +10,7 @@ info:
     url: http://localhost:8090
     email: test
 servers:
-  - url: 'http://localhost:8080'
+  - url: 'http://localhost:8090'
     description: dev
 paths:
   /accounts:

@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-
 import com.example.demo.api.AccountsApiDelegate;
 import com.example.demo.business.AccountService;
 import com.example.demo.model.GetAccountsResponseDto;
@@ -19,7 +18,6 @@ public class AccountController implements AccountsApiDelegate {
     public AccountController(AccountService accountService) {
         this.accountService = accountService;
     }
-
 
     @Override
     public ResponseEntity<GetAccountsResponseDto> getAccounts() {
