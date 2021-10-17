@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 public class AccountController implements AccountsApiDelegate {
-    private final AccountServiceImpl accountService;
+    private final AccountService accountService;
 
-    public AccountController(AccountServiceImpl accountService) {
+    public AccountController(AccountService accountService) {
         this.accountService = accountService;
     }
 
